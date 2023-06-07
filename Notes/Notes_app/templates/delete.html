@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/delete1.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Note</title>
+</head>
+<body>
+	<p><b>Are you sure you want to delete this note?</b></p>
+	<div class="tile">
+		<h1>{{list_to_delete.name}}</h1>
+		<p>{{list_to_delete.content}}</p>
+	</div>
+	<form method="post">
+		{% csrf_token %}
+		<button type="submit" name="delete">Delete </button>
+	</form>
+</body>
+</html>

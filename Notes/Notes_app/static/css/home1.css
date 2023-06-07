@@ -1,0 +1,106 @@
+*, *::after, *::before{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background: linear-gradient(to left, blue, blueviolet);
+	font-family: verdana;
+	overflow-y: scroll;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+h1{	
+	color: white;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+h2{
+	color: gray;
+	text-align: center;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+
+p{
+	color: black;
+}
+
+.main-bg{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.tile{
+	position: relative;
+	min-width: 20vw;
+	min-height: 30vh;
+	margin:20px 20px;
+	padding: 10px 10px;
+	border-radius: 5px;
+	border-color: orange;
+	border:none;
+	overflow-wrap: break-word;
+	background-color: white;
+	overflow-y:scroll;
+}
+
+.tile:hover{
+	scale: 1.01;
+	box-shadow: 0 0 2px 2px whitesmoke;
+	cursor: pointer;
+}
+
+.tile-footer > button{
+	font-weight: 500;
+	border-radius: 3px;
+	border: none;
+	margin-bottom: 2px;
+	width: 4rem;
+	height: 2rem;
+}
+
+#create-btn{
+	font-weight: 500;
+	border-radius: 3px;
+	border: none;
+	margin-bottom: 2px;
+	margin-left: 20px;
+	width: 8rem;
+	height: 3rem;
+	background-color: black;
+}
+
+#create-btn > a{
+	color: white;
+}
+
+#create-btn:hover{
+	scale: 1.02;
+}
+
+#edit-btn{
+	background-color: lightskyblue;
+}
+
+#edit-btn:hover{
+	background-color: blue;
+	transition: 1.2s;
+	cursor:  pointer;
+}
+
+#delete-btn{
+	background-color: crimson;	
+}
+
+#delete-btn:hover{
+	background-color: red;
+	transition: 1.2s;
+	cursor:  pointer;
+}

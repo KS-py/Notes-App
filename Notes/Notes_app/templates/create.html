@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/create.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Note</title>
+</head>
+<body>
+	<div class="main">
+		<h3> Create New Note</h3>
+		<form method="post" action="/create/">
+			{% csrf_token %}
+		 	{{form.as_p}}
+		 	<button type="submit" name="save"> Make new note </button>
+		</form>
+	</div>
+</body>
+</html>

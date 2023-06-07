@@ -1,0 +1,42 @@
+*, *::after, *::before{
+	margin: 0;
+	padding: 0;
+	box-sizing:  border-box;
+}
+
+body{
+	background: linear-gradient(to left, maroon, orangered);
+}
+
+h1{
+	color: purple;
+	font-size: 2em;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+
+.tile{
+	max-width: 20vw;
+	max-height: auto;
+	margin:50px 48px;
+	padding: 10px 10px;
+	border-radius: 5px;
+	border-color: orange;
+	border:  none;
+	background-color: white;
+	overflow-y:auto;
+	overflow-x: hidden;
+}
+
+
+button{
+	width: 10%;
+	height: 2em;
+	margin-left: 48px;
+	border-radius: 5px;
+}
+
+button:hover{
+	background-color: red;
+	transition:2s;
+}

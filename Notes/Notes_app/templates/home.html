@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home1.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+</head>
+<body>
+	<h1>NOTES</h1>
+	<button type="submit" id="create-btn"><a href="create"> Create New Note </a></button>
+	<div class="main-bg">
+		{% for i in Notes %}
+			<div class="tile">
+				<h2>{{i.name}}</h2>
+				<p>{{i.content}}</p>
+				<br>
+				<div class="tile-footer">
+					<button type="submit" id="edit-btn"><a href="edit/{{i.id}}">Edit</a></button>
+					<button type="submit" id="delete-btn"><a href="delete/{{i.id}}">Delete</a></button>
+				</div>
+			</div>				
+		{% endfor %}
+	</div>
+</body>
+</html>
